@@ -3,7 +3,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
-
 class DriverConfig:
     def driver_config(self):
         """
