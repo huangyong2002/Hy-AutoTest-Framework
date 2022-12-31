@@ -28,3 +28,11 @@ class HomeBase:
         :return:
         """
         return "//div[text()='我的日历']/following-sibling::div"
+
+    def home_user_avator(self):
+        """
+        首页头像大图
+        :return:
+        """
+        # 同级元素的上一个元素
+        return "//span[contains(text(),'欢迎您回来')]/parent::div/preceding-sibling::div//img"
