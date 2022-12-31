@@ -36,3 +36,9 @@ class HomeBase:
         """
         # 同级元素的上一个元素
         return "//span[contains(text(),'欢迎您回来')]/parent::div/preceding-sibling::div//img"
+    def home_user_avator_2(self):
+        """
+        首页头像大图二
+        :return:
+        """
+        return "//span[text()='我的地址']//ancestor::div[@class='first_card']/div[contains(@class,'avater')]//img"
