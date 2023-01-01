@@ -3,7 +3,7 @@
 # 存放selenium操作二次封装的方法
 import time
 
-from selenium.common.exceptions import ElementNotVisibleException
+from selenium.common.exceptions import ElementNotVisibleException, WebDriverException
 
 
 class ObjectMap:
@@ -44,6 +44,35 @@ class ObjectMap:
             time.sleep(0.1)
         raise ElementNotVisibleException("元素定位失败，定位方式：" + locate_type + "定位表达式：" + locator_expression)
 
+    def wait_for_ready_state_complete(self, driver, timeout=30):
+        """
+        等待页面完全加载成功
+        :param driver: 浏览器驱动
+        :param timeout: 超时时间
+        :return:
+        """
+        # 设置开始时间
+        start_ms = time.time() * 1000
+        # 设置结束时间
+        stop_ms = start_ms + (timeout * 1000)
+        for x in range(int(timeout * 10)):
+            try:
+                # 获取页面的状态
+                ready_state = driver.execute_script("reture document.readyState")
+            except WebDriverException:
+                # 如果有driver的错误，执行JS会失败，就直接跳过
+                return True
+            # 如果页面元素全部加载完成就返回True
+            if ready_state == "complete":
+                time.sleep(0.01)
+                return True
+            else:
+                now_ms = time.time() * 1000
+                # 如果超时了就break
+                if now_ms >= stop_ms:
+                    break
+                time.sleep(0.1)
+        raise Exception("打开网页是页面元素在%s秒后仍然没有完全加载完" % timeout)
 
 # if __name__ == '__main__':
 #     ObjectMap().element_get()
