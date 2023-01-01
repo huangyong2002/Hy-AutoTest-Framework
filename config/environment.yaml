@@ -1,4 +1,9 @@
-username: 周杰伦
-password: 123456
+user:
+  jay:
+    username: 周杰伦
+    password: 123456
+  william:
+    username: william
+    password: 123456
 
 url: http://www.tcpjwtester.top

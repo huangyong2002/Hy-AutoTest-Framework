@@ -10,6 +10,8 @@ from selenium.webdriver.common.keys import Keys
 
 
 class ObjectMap:
+    # 获取基础地址：http://www.tcpjwtester.top
+    url = GetConf().get_url()
     # locate_type,locate_expression定位表达式
     def element_get(self, driver, locate_type, locator_expression, timeout=10, must_be_visable=False):
         """
@@ -137,7 +139,7 @@ class ObjectMap:
         else:
             pass
 
-        def element_to_url(self,
+    def element_to_url(self,
                            driver,
                            url,
                            locate_type_disappear=None,
@@ -173,7 +175,7 @@ class ObjectMap:
                 return False
             return True
 
-        def element_is_display(self, driver, locate_type, locator_experssion):
+    def element_is_display(self, driver, locate_type, locator_experssion):
             """
             元素是否显示
             :param driver:
