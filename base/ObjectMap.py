@@ -3,8 +3,8 @@
 # 存放selenium操作二次封装的方法
 import time
 
-from selenium.common.exceptions import ElementNotVisibleException, WebDriverException
-
+from selenium.common.exceptions import ElementNotVisibleException, WebDriverException, NoSuchElementException
+from common.yaml_config import GetConf
 
 class ObjectMap:
     # locate_type,locate_expression定位表达式
@@ -28,7 +28,7 @@ class ObjectMap:
             try:
                 element = driver.find_element(by=locate_type, value=locator_expression)
             # 如果元素不是必须可见的，就直接返回元素
-                if not must_be_visible:
+                if not must_be_visable:
                     return element
             # 如果元素必须是可见的，则需要先判断元素是否可见
                 else:
@@ -169,6 +169,21 @@ class ObjectMap:
                 print("跳转地址出现异常，异常原因：%s" % e)
                 return False
             return True
+
+        def element_is_display(self, driver, locate_type, locator_experssion):
+            """
+            元素是否显示
+            :param driver:
+            :param locate_type:
+            :param locator_experssion:
+            :return:
+            """
+            try:
+                driver.find_element(by=locate_type, value=locator_experssion)
+                return True
+            except NoSuchElementException:
+                # 发生了NoSuchElementException异常，说明页面中未找到该元素，返回False
+                return False
 
 # if __name__ == '__main__':
 #     ObjectMap().element_get()
