@@ -32,8 +32,19 @@ def sep(path, add_sep_before=False, add_sep_after=False):
     print(all_path)
     return all_path
 
+# 在新增二手商品中对添加图片做一个单独的处理
+def get_img_path(img_name):
+    """
+    获取商品图片的路径
+    :param img_name:
+    :return:
+    """
+
+    img_dir_path = get_project_path() + sep(["img", img_name], add_sep_before=True)
+    return img_dir_path
 
 if __name__ == '__main__':
     # print(get_now_time())
     # print(get_project_path())
     sep(["config", "environment.yaml"],add_sep_before=True,add_sep_after=True)
+    print(get_img_path("商品图片一.jpg"))
