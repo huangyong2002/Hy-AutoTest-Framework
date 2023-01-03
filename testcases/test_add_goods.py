@@ -2,8 +2,6 @@
 # @Author:Henry
 from time import sleep
 
-import pytest
-
 from config.driver_config import DriverConfig
 from page.LoginPage import LoginPage
 from page.LeftMenuPage import LeftMenuPage
@@ -11,6 +9,7 @@ from page.GoodsPage import GoodsPage
 
 
 class TestAddGoods:
+
     def test_add_goods_001(self):
         driver = DriverConfig().driver_config()
         LoginPage().login(driver, "jay")
