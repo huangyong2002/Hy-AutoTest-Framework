@@ -2,14 +2,13 @@
 # @Author:Henry
 from time import sleep
 
-from config.driver_config import DriverConfig
 from page.LoginPage import LoginPage
 
 
 class TestLogin:
 
-    def test_login(self):
-        driver = DriverConfig().driver_config()
+    def test_login(self,driver):
+        # driver = DriverConfig().driver_config()
         LoginPage().login(driver, "jay")
         sleep(3)
         # driver.get("http://www.tcpjwtester.top")
@@ -20,4 +19,4 @@ class TestLogin:
         # sleep(1)
         # LoginPage().click_login(driver, "登录")
         # sleep(3)
-        driver.quit()
+        # driver.quit()

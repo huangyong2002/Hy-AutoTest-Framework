@@ -2,7 +2,7 @@
 # @Author:Henry
 from time import sleep
 
-from config.driver_config import DriverConfig
+
 from page.LeftMenuPage import LeftMenuPage
 from page.LoginPage import LoginPage
 from page.OrderPage import OrderPage
@@ -10,8 +10,7 @@ from page.OrderPage import OrderPage
 
 class TestOrderBuy:
 
-    def test_order_buy(self):
-        driver = DriverConfig().driver_config()
+    def test_order_buy(self,driver):
         LoginPage().login(driver, "jay")
         LeftMenuPage().click_level_one_menu(driver, "我的订单")
         sleep(1)
@@ -21,4 +20,3 @@ class TestOrderBuy:
         for tab in tab_list:
             OrderPage().click_order_tab(driver, tab)
             sleep(2)
-        driver.quit()
