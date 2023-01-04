@@ -47,3 +47,12 @@ class LoginPage(LoginBase, ObjectMap):
         self.login_input_value(driver, "用户名", username)
         self.login_input_value(driver, "密码", password)
         self.click_login(driver, "登录")
+
+    def login_assert(self, driver, img_name):
+        """
+        登录后判断头像
+        :param driver:
+        :param img_name:
+        :return:
+        """
+        return self.find_img_in_source(driver, img_name)
