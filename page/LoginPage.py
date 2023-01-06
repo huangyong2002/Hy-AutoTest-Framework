@@ -56,3 +56,12 @@ class LoginPage(LoginBase, ObjectMap):
         :return:
         """
         return self.find_img_in_source(driver, img_name)
+
+    def assert_login_success(self, driver):
+        """
+        验证是否登录成功
+        :param driver:
+        :return:
+        """
+        success_xpath = self.login_success()
+        self.element_appear(driver, By.XPATH, success_xpath, timeout=2)
