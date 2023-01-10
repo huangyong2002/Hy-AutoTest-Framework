@@ -10,7 +10,7 @@ from common.find_img import FindImg
 from common.tools import get_project_path,sep
 from common.yaml_config import GetConf
 from selenium.webdriver.common.keys import Keys
-
+from common.report_add_img import add_img_path_2_report
 
 class ObjectMap:
     # 获取基础地址：http://www.tcpjwtester.top
@@ -365,6 +365,7 @@ class ObjectMap:
         :param img_name:
         :return:
         """
+
         # 截图后图片保存的路径
         source_img_path = get_project_path() + sep(["img", "source_img", img_name], add_sep_before=True)
         # 需要查找的图片路径
@@ -372,9 +373,24 @@ class ObjectMap:
         # 截图并保存图片
         driver.get_screenshot_as_file(source_img_path)
         time.sleep(3)
+        add_img_path_2_report(source_img_path, "原图")
+        add_img_path_2_report(search_img_path, "需要查找的图片")
         # 在原图中查找是否有指定的图片，返回信心值
         confidence = FindImg().get_confidence(source_img_path, search_img_path)
         return confidence
+
+    # 滚动到元素的方法
+    def scroll_to_element(self, driver, locate_type, locator_expression):
+        """
+        滚动到元素
+        :param driver:
+        :param locate_type:
+        :param locator_expression:
+        :return:
+        """
+        ele = self.element_get(driver, locate_type, locator_expression)
+        driver.execute_script("arguments[0].scrollIntoView()", ele)
+        return True
 
 # if __name__ == '__main__':
 #     ObjectMap().element_get()

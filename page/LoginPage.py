@@ -1,5 +1,7 @@
 # @Time:2022/12/30 9:31
 # @Author:Henry
+import requests
+import time
 from selenium.webdriver.common.by import By
 
 from base.LoginBase import LoginBase
@@ -56,6 +58,7 @@ class LoginPage(LoginBase, ObjectMap):
         :param img_name:
         :return:
         """
+        log.info("登录后判断头像")
         return self.find_img_in_source(driver, img_name)
 
     def assert_login_success(self, driver):
@@ -66,3 +69,30 @@ class LoginPage(LoginBase, ObjectMap):
         """
         success_xpath = self.login_success()
         self.element_appear(driver, By.XPATH, success_xpath, timeout=2)
+
+    def api_login(self, driver, user):
+        """
+        通过api登录
+        :param driver:
+        :param user:
+        :return:
+        """
+        log.info("跳转登录页")
+        self.element_to_url(driver, "/login")
+        username, password = GetConf().get_username_password(user)
+        log.info("用户名：" + str(username))
+        log.info("密码" + str(password))
+        url = GetConf().get_url()
+        data = {
+            "user": username,
+            "password": password
+        }
+        log.info("通过api登录")
+        res = requests.post(url + "/api/user/login", json=data)
+        token = res.json()["data"]["token"]
+        js_script = "window.sessionStorage.setItem('token','%s');" % token
+        log.info("将token写入sessionstorage")
+        driver.execute_script(js_script)
+        time.sleep(2)
+        log.info("跳转主页")
+        self.element_to_url(driver, "/")
