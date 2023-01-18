@@ -1,15 +1,18 @@
 # @Time:2023/1/3 17:02
 # @Author:Henry
 import pytest
+
 from config.driver_config import DriverConfig
 from common.report_add_img import add_img_2_report
 
-@pytest.fixture(scope="function")
+
+@pytest.fixture()
 def driver():
     global get_driver
     get_driver = DriverConfig().driver_config()
-    yield get_driver
+    yield get_driver  # fixture先实例化浏览器驱动然后通过yield返回到测试用例中（入参）做完操作之后返回到driver中，然后执行下一步，关闭浏览器
     get_driver.quit()
+
 
 @pytest.hookimpl(hookwrapper=True, tryfirst=True)
 def pytest_runtest_makereport(item, call):
