@@ -12,6 +12,7 @@ from logs.log import log
 from common.ocr_identify import OcrIdentify
 from common.report_add_img import add_img_path_2_report
 
+
 class LoginPage(LoginBase, ObjectMap):
 
     def login_input_value(self, driver, input_placeholder, input_value):

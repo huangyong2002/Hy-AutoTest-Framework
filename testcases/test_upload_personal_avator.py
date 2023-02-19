@@ -14,7 +14,7 @@ class TestPersonalInfo:
         sleep(1)
         LeftMenuPage().click_level_two_menu(driver, "个人资料")
         sleep(2)
-        AccountPage().upload_avatar(driver, "个人头像一.jpeg")
+        AccountPage().upload_avatar(driver, "个人头像二.jpg")
         sleep(3)
         AccountPage().click_save(driver)
         sleep(3)
