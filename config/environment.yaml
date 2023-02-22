@@ -10,7 +10,9 @@ user:
     password: william
 
 url: http://www.tcpjwtester.top
+
 jenkins:
   url: http://localhost:8080
+
 dingding_group:
   webhook: https://oapi.dingtalk.com/robot/send?access_token=6b4d8f30d3a41165c35ab2e3e7e06373a8640d77ca436b8ab643c41bc2f2bba2

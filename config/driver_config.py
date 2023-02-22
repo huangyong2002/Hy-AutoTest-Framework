@@ -9,9 +9,9 @@ class DriverConfig:
         浏览器驱动
         :return:
         """
-        # 设置Chrome窗口大小,设置为1920*1080
+        # 设置Chrome窗口大小,设置为1720*1060
         options = webdriver.ChromeOptions()
-        options.add_argument("window-size=1920,1080")
+        options.add_argument("window-size=1720,1060")
         # 去除“Chrome正受到自动检测软件的控制”的提示
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         # 解决selenium无法访问https的问题
