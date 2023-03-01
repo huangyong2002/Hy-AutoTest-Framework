@@ -11,7 +11,6 @@
 [饿了么质量体系搭建实战_张丙振、檀飞翔](https://weread.qq.com/web/bookDetail/9cb32f10721a48be9cbdc2a)
 ### 推荐书籍2：
 [高效自动化测试平台：设计与开发实战](https://weread.qq.com/web/bookDetail/4ce323907204397b4cedf59)
-# Web自动化测试框架设计思路
 
 # 项目基本情况
 [V1.0版本](https://github.com/huangyong2002/Hy-UiTest-Framework/tree/V1.0)  
