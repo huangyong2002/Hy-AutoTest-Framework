@@ -1,6 +1,7 @@
 
-# Hy-UiTest-Framework
-基于selenium二次封装实现的web自动化测试框架，方便测试脚本的维护，代码复用。
+# 基于图像识别的自动化测试框架
+设计并实现一个基于UI自动化、接口自动化、PO模式、数据驱动、关键字驱动、持续集成与持续发布、图像识别等技术的自动化测试框架。本框架选用 Selenium+Requests+pytest框架作为控制层进行逻辑验证，YAML作为持久层进行测试数据的存储，利用Logging 埋点记录日志，基于 Git+Jenkins 实现持续集成，之后在显示层通过钉钉机器人将漂亮的Allure测试报告持续交付至钉钉群，最终实现了自动化测试。
+
 
 ![](https://img.shields.io/badge/python-%3E%3D3.9-brightgreen)
 ![](https://img.shields.io/badge/License-MIT-blue)
