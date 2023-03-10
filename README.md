@@ -7,11 +7,11 @@
 ![](https://img.shields.io/badge/License-MIT-blue)
 ![](https://img.shields.io/badge/version-4.0-yellowgreen)
 
+推荐书籍1：[饿了么质量体系搭建实战_张丙振、檀飞翔](https://weread.qq.com/web/bookDetail/9cb32f10721a48be9cbdc2a)
 
-### 推荐书籍1：
-[饿了么质量体系搭建实战_张丙振、檀飞翔](https://weread.qq.com/web/bookDetail/9cb32f10721a48be9cbdc2a)
-### 推荐书籍2：
-[高效自动化测试平台：设计与开发实战](https://weread.qq.com/web/bookDetail/4ce323907204397b4cedf59)
+推荐书籍2：[高效自动化测试平台：设计与开发实战](https://weread.qq.com/web/bookDetail/4ce323907204397b4cedf59)
+# 自动化测试框架设计与优化思路
+![image](https://raw.fastgit.org/huangyong2002/Hy-AutoTest-Framework/master/img/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E4%B8%8E%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF.jpg)
 
 # 项目基本情况
 [V1.0版本](https://github.com/huangyong2002/Hy-UiTest-Framework/tree/V1.0)  
