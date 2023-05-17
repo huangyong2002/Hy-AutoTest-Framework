@@ -57,5 +57,4 @@
 > page: 页面类
 > 
 > testcase: 测试用例
-# 项目演示
-https://www.bilibili.com/video/BV1Gv4y1e77V?share_source=copy_web
+
