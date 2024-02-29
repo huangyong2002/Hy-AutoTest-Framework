@@ -11,8 +11,8 @@
 
 推荐书籍2：[高效自动化测试平台：设计与开发实战](https://weread.qq.com/web/bookDetail/4ce323907204397b4cedf59)
 # 自动化测试框架设计与优化思路
-![image](https://raw.fastgit.org/huangyong2002/Hy-AutoTest-Framework/master/img/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E4%B8%8E%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF.jpg)
-
+![image](img/框架设计与优化思路.jpg)
+---
 # 项目基本情况
 [V1.0版本](https://github.com/huangyong2002/Hy-UiTest-Framework/tree/V1.0)  
 - [x] 基于PO设计模式构建项目
@@ -39,10 +39,6 @@
 - [ ] 基于Redis存储测试结果（测试用例名、测试结果、自动化测试进度等）并发送至钉钉群
 
 
-
- 
-
-
 # 目录介绍
 > base: 包括selenium二次封装以及各个页面元素的封装
 > 
@@ -57,4 +53,7 @@
 > page: 页面类
 > 
 > testcase: 测试用例
+
+# 项目演示
+https://www.bilibili.com/video/BV1Gv4y1e77V?share_source=copy_web
 
