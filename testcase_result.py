@@ -5,7 +5,7 @@ from common.ding_talk import send_dingtalk_msg_markdown
 from common.yaml_config import GetConf
 
 # 项目名称
-project_name = "Hy-UiTest-Framework"
+project_name = "Hy-AutoTest-Framework"
 # 报告标题
 report_title = "UI自动化测试-测试报告"
 # jenkins地址

@@ -25,7 +25,7 @@ def get_project_path():
     获取项目绝对路径
     :return:
     """
-    project_name = "Hy-UiTest-Framework"
+    project_name = "Hy-AutoTest-Framework"
     file_path = os.path.dirname(__file__)
     # print(file_path)
     # print(file_path.find(project_name))
