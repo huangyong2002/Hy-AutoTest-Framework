@@ -1,6 +1,6 @@
 user:
   jay:
-    username: 周杰伦
+    username: jay
     password: 123456
   william:
     username: william
@@ -16,3 +16,10 @@ jenkins:
 
 dingding_group:
   webhook: https://oapi.dingtalk.com/robot/send?access_token=6b4d8f30d3a41165c35ab2e3e7e06373a8640d77ca436b8ab643c41bc2f2bba2
+
+mysql:
+  db: trading_system
+  host: 192.168.197.129
+  password: william
+  port: 3306
+  user: root

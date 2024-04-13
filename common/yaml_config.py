@@ -38,7 +38,11 @@ class GetConf:
     def get_jenkins(self):
         return self.env["jenkins"]
 
+    def get_mysql_config(self):
+        return self.env["mysql"]
+
 if __name__ == '__main__':
     # print(GetConf().get_url())
     # print(GetConf().get_dingding_webhook())
-    print(GetConf().get_jenkins())
+    # print(GetConf().get_jenkins())
+    print(GetConf().get_mysql_config())
