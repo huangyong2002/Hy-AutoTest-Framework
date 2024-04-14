@@ -7,9 +7,10 @@
 ![](https://img.shields.io/badge/License-MIT-blue)
 ![](https://img.shields.io/badge/version-4.0-yellowgreen)
 
-推荐书籍1：[饿了么质量体系搭建实战_张丙振、檀飞翔](https://weread.qq.com/web/bookDetail/9cb32f10721a48be9cbdc2a)
+推荐书籍1：[Selenium自动化测试完全指南：基于Python_赵卓](https://weread.qq.com/web/bookDetail/d5c32d2072462defd5c7805)
 
-推荐书籍2：[高效自动化测试平台：设计与开发实战](https://weread.qq.com/web/bookDetail/4ce323907204397b4cedf59)
+推荐书籍2：[饿了么质量体系搭建实战_张丙振、檀飞翔](https://weread.qq.com/web/bookDetail/9cb32f10721a48be9cbdc2a)
+
 # 自动化测试框架设计与优化思路
 ![image](img/框架设计与优化思路.jpg)
 ---
@@ -35,7 +36,7 @@
 - [x] 增加日志处理机制
 - [x] 支持处理图形验证码
 - [x] 支持分布式执行测试用例并将测试报告自动发送至钉钉群
-- [ ] 支持数据库校验（MySQL、Oracle等）
+- [x] 支持MySQL数据库校验
 - [ ] 基于Redis存储测试结果（测试用例名、测试结果、自动化测试进度等）并发送至钉钉群
 
 
